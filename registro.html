@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>Juguemos - Registro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylescss.css">
+    <script src="verjavascript.js"></script>
+    <style>
+        .login h2{
+                color: white;
+            }
+            .login h3{
+                color: white;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">
+            <img src="avatar.png" alt="Avatar">
+        </div>
+        <div class="login">
+            <h2>Crear una cuenta</h2>
+            <h3>Nombre</h3>
+            <input type="text" placeholder="Nombre">
+            <h3>Apellido</h3>
+            <input type="text" placeholder="Apellido">
+            <h3>Correo electrónico</h3>
+            <input type="email" placeholder="Correo electrónico">
+            <h3>Contraseña</h3>
+            <div class="password-field">
+                <input type="password" placeholder="Contraseña">
+                <span class="toggle-password"></span>
+            </div>
+            <h3>Repetir Contraseña</h3>
+            <div class="password-field">
+                <input type="password" placeholder="Repetir Contraseña">
+                <span class="toggle-password"></span>
+            </div>
+            <h3>Seleccione el rol</h3>
+            <div class="role-selection">
+                <div class="role-option">
+                    <input type="radio" name="role" id="student" value="student">
+                    <label for="student">Estudiante</label>
+                </div>
+                <div class="role-option">
+                    <input type="radio" name="role" id="teacher" value="teacher">
+                    <label for="teacher">Profesor</label>
+                </div>
+            </div>
+
+            <button class="transparent-button register-button" onclick="redirigirSegunRol()">Registrarme</button>
+        </div>
+    </div>
+</body>
+<script>
+    function redirigirSegunRol() {
+        var selectedRole = document.querySelector('input[name="role"]:checked').value;
+
+        if (selectedRole === "student") {
+            window.location.href = "ingresar.html";
+        } else if (selectedRole === "teacher") {
+            window.location.href = "profeurl.html";
+        }
+    }
+</script>
+</html>
+

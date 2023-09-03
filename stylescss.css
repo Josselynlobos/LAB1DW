@@ -1,0 +1,72 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30/08/2023, 02:49:08 PM
+    Author     : Joss
+*/
+
+            body{
+                margin:0;
+                padding:0;
+                font-family: Arial,sans-serif;
+            }
+            .container{
+                display: flex;
+                background-color: #753569;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+            .login-form{
+                padding: 30px;
+                margin-left: 60px;
+            }
+            .avatar{
+                
+                
+            }
+            .login-form h2{
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                color: white;
+            }
+            .login-form h3{
+                color: white;
+            }
+            .login-form input{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .password-field{
+                position:relative;
+            }
+            .toggle-password {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            .transparent-button {
+                background-color: transparent;
+                border: 2px solid #F26CA7;
+                color: #F26CA7;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .transparent-button:hover {
+                background-color: #F26CA7;
+                color: white;
+            }
+            .register-button {
+                margin-top: 10px;
+            }
+            
+

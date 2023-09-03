@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Juguemos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylescss.css">
+        <script src="verjavascript.js"></script>
+        <style>
+            .form {
+                padding: 20px;
+                text-align: left; /* Alinea el contenido del formulario a la izquierda */
+                width: 70%; /* Ancho del formulario en relación al viewport */
+            }
+
+            h3 {
+                color: white; /* Color de letra blanco para los títulos h3 */
+                font-size: 24px; /* Tamaño de letra para h3 (ajusta según tus preferencias) */
+                text-align: left; /* Alinea los títulos a la izquierda */
+            }
+
+            #texto-generado {
+                color: white; /* Color de letra blanco para el texto generado */
+                font-size: 18px; /* Tamaño de letra para el texto generado (ajusta según tus preferencias) */
+                text-align: left; /* Alinea el texto generado a la izquierda */
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <h3>Seleccione el tipo de preguntas</h3>
+                <div class="preguntas-seleccionar">
+                    <div class="role-option">
+                        <input type="radio" name="role" id="V/F" value="V/F">
+                        <label for="V/F">Preguntas V/F</label>
+                    </div>
+                    <div class="role-option">
+                        <input type="radio" name="role" id="multiple" value="multiple">
+                        <label for="multiple">Opcion multiple</label>
+                    </div>
+                </div>
+                <h3>Cantidad de preguntas</h3>
+                <input type="number" id="preguntas" placeholder="preguntas">
+                <h3>Generar codigo</h3>
+                <input type="number" id="codigo" placeholder="codigo">
+                <br>
+                <br><!-- es el espacio -->
+                <a href="h" class="transparent-button register-button" style="text-decoration: none;">Generar preguntas</a>
+            </div>
+        </div>
+    </body>
+
+</html>

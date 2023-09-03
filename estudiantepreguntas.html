@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguemos</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            font-family: Arial,sans-serif;
+        }
+        .container{
+                display: flex;
+                background-color: #753569;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+        .login-form {
+            padding: 20px;
+            text-align: left;
+            border-radius: 10px;
+            width: 70%;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .seleccionar {
+            display: flex;
+            align-items: center;
+        }
+
+        .role-option {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            color: white;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .transparent-button {
+                background-color: transparent;
+                border: 2px solid #F26CA7;
+                color: #F26CA7;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .transparent-button:hover {
+                background-color: #F26CA7;
+                color: white;
+            }
+            .cronometro{
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="cronometro" id="cronometro">Tiempo restante: 10:00</div>
+            <h2>¿Aquí se visualizará la pregunta que será generada a partir del texto?</h2>
+            <br>
+            <div class="seleccionar">
+                <div class="role-option">
+                    <input type="radio" name="role" id="true" value="true">
+                    <label for="true">Verdadero</label>
+                </div>
+                <div class="role-option">
+                    <input type="radio" name="role" id="false" value="false">
+                    <label for="false">Falso</label>
+                </div>
+            </div>
+            <br><!-- Espacio -->
+            <br>
+            <a href="g" class="transparent-button" style="text-decoration: none;">Siguiente</a>
+        </div>
+    </div>
+
+    <script>
+        // Función para iniciar el cronómetro
+        function iniciarCronometro() {
+            var tiempoRestante = 600; // 10 minutos en segundos
+            var cronometro = document.getElementById("cronometro");
+
+            // Actualizar el cronómetro cada segundo
+            var intervalo = setInterval(function() {
+                var minutos = Math.floor(tiempoRestante / 60);
+                var segundos = tiempoRestante % 60;
+
+                // Formatear el tiempo en minutos y segundos (agregando ceros si es necesario)
+                var tiempoFormateado = minutos.toString().padStart(2, '0') + ":" + segundos.toString().padStart(2, '0');
+
+                // Mostrar el tiempo restante en el elemento "cronometro"
+                cronometro.textContent = "Tiempo restante: " + tiempoFormateado;
+
+                // Reducir el tiempo restante
+                tiempoRestante--;
+
+                // Detener el cronómetro cuando llegue a cero
+                if (tiempoRestante < 0) {
+                    clearInterval(intervalo);
+                    cronometro.textContent = "Tiempo agotado";
+                }
+            }, 1000); // Actualizar cada segundo
+        }
+
+        // Llama a la función para iniciar el cronómetro cuando la página se carga
+        window.onload = iniciarCronometro;
+    </script>
+</body>
+</html>

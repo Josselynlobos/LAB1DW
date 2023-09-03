@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Juguemos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="stylescss.css">
+        <script src="verjavascript.js"></script>
+        <style>
+            .form {
+                padding: 20px;
+                text-align: left; /* Alinea el contenido del formulario a la izquierda */
+                width: 70%; /* Ancho del formulario en relación al viewport */
+            }
+
+            h3 {
+                color: white; /* Color de letra blanco para los títulos h3 */
+                font-size: 24px; /* Tamaño de letra para h3 (ajusta según tus preferencias) */
+                text-align: left; /* Alinea los títulos a la izquierda */
+            }
+
+            #texto-generado {
+                color: white; /* Color de letra blanco para el texto generado */
+                font-size: 18px; /* Tamaño de letra para el texto generado (ajusta según tus preferencias) */
+                text-align: left; /* Alinea el texto generado a la izquierda */
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <h3>Ingrese URL del video</h3>
+                <input type="text" id="video-url" placeholder="url del video">
+                <button class="transparent-button" onclick="generarTexto()" style="text-decoration: none;">Generar Texto</button>
+                <h3>Texto generado</h3>
+                <p id="texto-generado"></p> <!-- Este elemento mostrará el texto generado -->
+                <br>
+                <br><!-- es el espacio -->
+                <a href="preguntas.html" class="transparent-button register-button" style="text-decoration: none;">Generar preguntas</a>
+            </div>
+        </div>
+    </body>
+    <script>
+        function generarTexto() {
+            // Obtén el valor del campo de entrada de la URL del video
+            var videoUrl = document.getElementById("video-url").value;
+            // Supongamos que el texto generado se almacena en una variable llamada "textoGenerado":
+            var textoGenerado = "Este es el texto generado a partir de la URL del video.";
+            var textoGeneradoElement = document.getElementById("texto-generado");
+            textoGeneradoElement.textContent = textoGenerado;
+        }
+    </script>
+
+</html>
